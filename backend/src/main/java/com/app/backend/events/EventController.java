@@ -16,17 +16,6 @@ public class EventController {
         this.repo = repo;
     }
 
-    // @GetMapping
-    // public List<Event> list() {
-    //     return repo.findAll();
-    // }
-
-    // @GetMapping("/{id}")
-    // public Event getById(@PathVariable Long id) {
-    //     return repo.findById(id)
-    //             .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Event not found Manali"));
-    // }
-
     @GetMapping
     public List<EventResponse> list() {
         return repo.findAll().stream().map(EventResponse::from).toList();
