@@ -10,4 +10,9 @@ spring:
     hibernate:
       ddl-auto: validate
   flyway:
-    enabled: true
+    enabled: 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: mappings
